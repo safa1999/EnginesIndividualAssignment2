@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledBullets: []
   bullet: {fileID: 7008785284576285171, guid: bb06c5ba2d15c2647b82760f50c866d5, type: 3}
-  amountPool: 10
+  amount: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

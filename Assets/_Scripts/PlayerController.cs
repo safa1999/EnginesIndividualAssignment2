@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool isFiring = false;
 
     //TODO: create a reference to the BulletPoolManager here
+    private BulletPoolManager GetBullet; 
 
     // Start is called before the first frame update
     void Start()
@@ -119,6 +120,7 @@ public class PlayerController : MonoBehaviour
                 //TODO: GetBullet function which will return a reference to a 
                 //TODO: bullet object. 
                 //TODO: Ensure you position the new bullet at the bulletSpawn position
+                bullet.transform.position = bulletSpawn.transform.position; 
                 Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
             }
 

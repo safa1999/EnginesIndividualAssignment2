@@ -7,8 +7,11 @@ public class BulletController : MonoBehaviour
 {
     public float bulletSpeed = 0.1f;
     public Boundary boundary;
+    public GameObject bullet;
+    public Transform bulletSpawn;
 
     //TODO: create a reference to the BulletPoolManager
+    private BulletPoolManager bulletPooler;
 
     void Start()
     {
@@ -34,6 +37,12 @@ public class BulletController : MonoBehaviour
         {
             //TODO: This code needs to change to use the BulletPoolManager's
             //TODO: ResetBullet function which will return the bullet to the pool
+
+            //ResetBullet(GameObject bullet); 
+            //bullet.transform.position = bulletSpawn.transform.position;
+
+            bulletPooler.ResetBullet(this.gameObject);
+            //bullet.SetActive(false); 
             Destroy(this.gameObject);
         }
     }
