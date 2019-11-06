@@ -24,6 +24,7 @@ public class BulletPoolManager : MonoBehaviour
             GameObject stuff = (GameObject)Instantiate(bullet);
             stuff.SetActive(false);
             pooledBullets.Add(stuff); 
+            //creates a pool that you can chane the size of 
         }
 
     }
@@ -39,7 +40,6 @@ public class BulletPoolManager : MonoBehaviour
     {
         //gets the rotation and position of the bullet
         return bullet; 
-
     }
 
     //TODO: modify this function to reset/return a bullet back to the Pool 
@@ -51,6 +51,7 @@ public class BulletPoolManager : MonoBehaviour
 
         bullet.SetActive(false); 
 
+        //can also just reset the position of the bullet to the original spawn point 
         bullet.transform.position = bulletSpawn.transform.position; 
 
     }
